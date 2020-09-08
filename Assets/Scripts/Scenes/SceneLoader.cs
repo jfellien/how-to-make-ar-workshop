@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using easyar;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,8 +12,8 @@ namespace Scenes
         {
             StartCoroutine(AddSceneAsync(sceneName));
         }
-        
-        public IEnumerator AddSceneAsync(string sceneName)
+
+        private IEnumerator AddSceneAsync(string sceneName)
         {
             if (SceneAlreadyLoaded(sceneName) == false)
             {
