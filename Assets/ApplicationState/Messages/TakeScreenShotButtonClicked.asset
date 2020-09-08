@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4156683ee88840d6bc29960177d33f61, type: 3}
-  m_Name: TakeScreenShot
+  m_Name: TakeScreenShotButtonClicked
   m_EditorClassIdentifier: 

@@ -22,8 +22,7 @@ namespace easyar
         /// <para xml:lang="en">EasyAR Sense License Key。Used for validation of EasyAR Sense functions. Please visit https://www.easyar.com for more details.</para>
         /// <para xml:lang="zh">EasyAR Sense License Key。用于验证EasyAR Sense内部各种功能是否可用。详见 https://www.easyar.cn 。</para>
         /// </summary>
-        [HideInInspector, SerializeField]
-        [TextArea(1, 10)]
+        [HideInInspector, SerializeField, TextArea(1, 10)]
         public string LicenseKey;
         /// <summary>
         /// <para xml:lang="en"><see cref="Gizmos"/> configuration for <see cref="ImageTarget"/> and <see cref="ObjectTarget"/>.</para>

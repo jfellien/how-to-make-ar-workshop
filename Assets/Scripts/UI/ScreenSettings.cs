@@ -5,7 +5,7 @@ namespace UI
 {
     public class ScreenSettings : MonoBehaviour
     {
-        [SerializeField] [Tooltip("Enables or disables Screen Rotation Lock")]
+        [SerializeField, Tooltip("Enables or disables Screen Rotation Lock")] 
         private bool allowScreenRotation;
 
         private void Start()
