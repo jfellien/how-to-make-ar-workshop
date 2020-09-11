@@ -121,6 +121,198 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &216592793
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1180761479238358, guid: 5a99091c6aef6cd4191c57f9eac6486a, type: 3}
+      propertyPath: m_Name
+      value: EasyAR_ImageTracker-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009923227746670, guid: 5a99091c6aef6cd4191c57f9eac6486a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009923227746670, guid: 5a99091c6aef6cd4191c57f9eac6486a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009923227746670, guid: 5a99091c6aef6cd4191c57f9eac6486a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009923227746670, guid: 5a99091c6aef6cd4191c57f9eac6486a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009923227746670, guid: 5a99091c6aef6cd4191c57f9eac6486a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009923227746670, guid: 5a99091c6aef6cd4191c57f9eac6486a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009923227746670, guid: 5a99091c6aef6cd4191c57f9eac6486a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009923227746670, guid: 5a99091c6aef6cd4191c57f9eac6486a, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009923227746670, guid: 5a99091c6aef6cd4191c57f9eac6486a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009923227746670, guid: 5a99091c6aef6cd4191c57f9eac6486a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009923227746670, guid: 5a99091c6aef6cd4191c57f9eac6486a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5a99091c6aef6cd4191c57f9eac6486a, type: 3}
+--- !u!114 &216592794 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114835984153989490, guid: 5a99091c6aef6cd4191c57f9eac6486a,
+    type: 3}
+  m_PrefabInstance: {fileID: 216592793}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f3bd5189df208f4ead26ed7eabd92cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &216592795 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1180761479238358, guid: 5a99091c6aef6cd4191c57f9eac6486a,
+    type: 3}
+  m_PrefabInstance: {fileID: 216592793}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &216592796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216592795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 560f1ad26df64951b1e3ce592e22ed04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arIsAvailable: {fileID: 11400000, guid: 7cd84da9deca5f040b20c1e2a11178dc, type: 2}
+  trackingIsActive: {fileID: 11400000, guid: ab95957fd73b50d4da46985f3c451dd5, type: 2}
+--- !u!1 &772108712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 772108716}
+  - component: {fileID: 772108715}
+  - component: {fileID: 772108714}
+  - component: {fileID: 772108713}
+  m_Layer: 0
+  m_Name: ImageTrackerOnTheFly
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &772108713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772108712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269db9b68dcb4b909fb01dfd7cb21bb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: c1396e8a47763d040acfbc0ff45385fd, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 772108715}
+        m_MethodName: StartTrackingForImage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &772108714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772108712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1cd68d28b16486789fa7d718c612ec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: 22c90feac995760448bc5d9c16fcf966, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 772108715}
+        m_MethodName: TakeScreenshot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &772108715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772108712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f857641796b34791837d1d49740b4c43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageTargetTracker: {fileID: 216592794}
+  trackingProjection: {fileID: 856601670117699726, guid: 4bb218e7ad6728b4b93c9b8e12d41e98,
+    type: 3}
+  screenshotWasTaken: {fileID: 11400000, guid: c1396e8a47763d040acfbc0ff45385fd, type: 2}
+--- !u!4 &772108716
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772108712}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1516014139
 GameObject:
   m_ObjectHideFlags: 0

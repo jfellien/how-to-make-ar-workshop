@@ -33,13 +33,13 @@ namespace Behaviours
             
             // Das imageTarget benötigt einen ImageController
             // Am Controller werden die Parameter für das Tracking gesetzt
-            //var controller = ...
+            var controller = imageTarget.AddComponent<ImageTargetController>();
 
-            //controller.SourceType = ...
-            //controller.ImageFileSource.PathType = ...
-            //controller.ImageFileSource.Path = ...
-            //controller.ImageFileSource.Name = ...
-            //controller.Tracker = ...
+            controller.SourceType = ImageTargetController.DataSource.ImageFile;
+            controller.ImageFileSource.PathType = PathType.Absolute;
+            controller.ImageFileSource.Path = imageFilePath;
+            controller.ImageFileSource.Name = targetName;
+            controller.Tracker = imageTargetTracker;
 
             AddProjection(imageTarget);
         }
@@ -63,6 +63,7 @@ namespace Behaviours
             SaveScreenshot(screenshotsPath, screenshot);
 
             // Event auslösen, dass der Screenshot gemacht wurde. Als Parameter den ScreenshotFilePath übergeben
+            screenshotWasTaken.Raise(screenshotsPath);
         }
         
         private static byte[] ReadPixelsFromScreen()
@@ -89,6 +90,15 @@ namespace Behaviours
             // An Position 0,0,0 soll eine Projektion erstellt werden,
             // die senkrecht auf dem Screenshot erscheint
             // Die Projektion ist ein Kindelement vom ImageTarget
+
+            var projectionPosition = Vector3.zero;
+            var projectionRotation = Quaternion.Euler(90, 0, 0);
+
+            Instantiate(
+                trackingProjection,
+                projectionPosition,
+                projectionRotation,
+                imageTarget.transform);
         }
     }
 }
