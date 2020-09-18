@@ -22,6 +22,8 @@ namespace Behaviours
         {
             yield return new WaitUntil(() => EasyARController.Initialized);
             
+            Debug.Log("[>>>>>> APP <<<<<<<] EasyAR is ready for tracking");
+            
             arIsAvailable.Raise();
             trackingIsActive.Set(true);
         }
