@@ -24,10 +24,14 @@ namespace Behaviours
             var screenshotsPath = GetScreenshotsPath();
 
             StartCoroutine(TakeAndSaveScreenshot(screenshotsPath));
+            
+            Debug.Log("[>>>>>>> APP <<<<<<<] Took Screenshot");
         }
         
         public void StartTrackingForImage(string imageFilePath)
         {
+            Debug.Log($"[>>>>>>> APP <<<<<<<] Prepare Tracking for { imageFilePath }");
+            
             var targetName = Guid.NewGuid().ToString();
             var imageTarget = new GameObject(targetName);
             
@@ -40,6 +44,8 @@ namespace Behaviours
             controller.ImageFileSource.Path = imageFilePath;
             controller.ImageFileSource.Name = targetName;
             controller.Tracker = imageTargetTracker;
+            
+            Debug.Log("[>>>>>>> APP <<<<<<<] Started Tracking");
 
             AddProjection(imageTarget);
         }
@@ -60,10 +66,10 @@ namespace Behaviours
 
             var screenshot = ReadPixelsFromScreen();
 
-            SaveScreenshot(screenshotsPath, screenshot);
+            var screenShotFilePath = SaveScreenshot(screenshotsPath, screenshot);
 
             // Event auslösen, dass der Screenshot gemacht wurde. Als Parameter den ScreenshotFilePath übergeben
-            screenshotWasTaken.Raise(screenshotsPath);
+            screenshotWasTaken.Raise(screenShotFilePath);
         }
         
         private static byte[] ReadPixelsFromScreen()
@@ -77,12 +83,15 @@ namespace Behaviours
             return data;
         }
 
-        private static void SaveScreenshot(string screenshotsPath, byte[] screenshot)
+        private static string SaveScreenshot(string screenshotsPath, byte[] screenshot)
         {
             var screenshotName = $"photo{DateTime.Now.Ticks}.jpg";
             var screenshotFilePath = Path.Combine(screenshotsPath, screenshotName);
 
             File.WriteAllBytes(screenshotFilePath, screenshot);
+            Debug.Log($"[>>>>>>> APP <<<<<<<] Saved Screenshot { screenshotName }");
+
+            return screenshotFilePath;
         }
         
         private void AddProjection(GameObject imageTarget)
@@ -92,13 +101,15 @@ namespace Behaviours
             // Die Projektion ist ein Kindelement vom ImageTarget
 
             var projectionPosition = Vector3.zero;
-            var projectionRotation = Quaternion.Euler(90, 0, 0);
+            var projectionRotation = Quaternion.Euler(270, 0, 0);
 
             Instantiate(
                 trackingProjection,
                 projectionPosition,
                 projectionRotation,
                 imageTarget.transform);
+            
+            Debug.Log("[>>>>>>> APP <<<<<<<] Projection Added");
         }
     }
 }
